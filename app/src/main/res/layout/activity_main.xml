@@ -4,147 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/relativeLayout">
 
     <ImageView
-        android:id="@+id/gridBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/board" />
-
-    <android.support.v7.widget.GridLayout
-        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerInParent="false"
-        android:layout_centerVertical="true"
-        app:columnCount="3"
-        app:rowCount="3">
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/gamester"
+        android:id="@+id/logo"/>
 
-        <ImageView
-            android:id="@+id/c1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="80dp"
-            android:onClick="dropIn"
-            android:tag="1"
-            app:layout_column="0"
-            app:layout_row="0" />
-
-        <ImageView
-            android:id="@+id/c2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="80dp"
-            android:onClick="dropIn"
-            android:tag="2"
-            app:layout_column="1"
-            app:layout_row="0" />
-
-        <ImageView
-            android:id="@+id/c3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="80dp"
-            android:onClick="dropIn"
-            android:tag="3"
-            app:layout_column="2"
-            app:layout_row="0" />
-
-        <ImageView
-            android:id="@+id/c4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:onClick="dropIn"
-            android:tag="4"
-            app:layout_column="0"
-            app:layout_row="1" />
-
-        <ImageView
-            android:id="@+id/c5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:onClick="dropIn"
-            android:tag="5"
-            app:layout_column="1"
-            app:layout_row="1" />
-
-        <ImageView
-            android:id="@+id/c6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:onClick="dropIn"
-            android:tag="6"
-            app:layout_column="2"
-            app:layout_row="1" />
-
-        <ImageView
-            android:id="@+id/c7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:onClick="dropIn"
-            android:tag="7"
-            app:layout_column="0"
-            app:layout_row="2" />
-
-        <ImageView
-            android:id="@+id/c8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:onClick="dropIn"
-            android:tag="8"
-            app:layout_column="1"
-            app:layout_row="2" />
-
-        <ImageView
-            android:id="@+id/c9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:onClick="dropIn"
-            android:tag="9"
-            app:layout_column="2"
-            app:layout_row="2" />
-
-    </android.support.v7.widget.GridLayout>
-
-    <LinearLayout
-        android:id="@+id/playAgainLayout"
+    <TextView
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:alpha="1"
-        android:background="@android:color/holo_orange_light"
-        android:orientation="vertical"
-        android:padding="30dp"
-        android:visibility="invisible">
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Gamester"
+        android:textColor="#242848"
+        android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/winnerMessage"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="190sp"
+        android:background="@drawable/background_rect"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="30sp" />
+            android:background="@drawable/text_rect"
+            android:padding="10dp"
+            android:ems="10"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/text_rect"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
 
         <Button
-            android:id="@+id/playAgain"
+            android:id="@+id/buttonSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/button_rect"
+            android:shadowColor="#232526"
+            android:text="@string/sign_up"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="playAgain"
-            android:text="Play Again" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_account"
+                android:id="@+id/message"
+                android:textColor="#e5e7e8"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:text="@string/log_in"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:background="@drawable/progressbar"/>
 
 </RelativeLayout>

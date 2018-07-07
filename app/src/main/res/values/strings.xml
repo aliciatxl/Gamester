@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Android1</string>
+    <string name="app_name">Gamester</string>
+    <string name="title_activity_nav">Games</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">Tic Tac Toe</string>
+    <string name="tab_text_2">Guess The Celebrity</string>
+    <string name="tab_text_3">Brain Trainer</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="log_out">Log Out</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="log_in">Log In</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="return_string">Return</string>
 </resources>
